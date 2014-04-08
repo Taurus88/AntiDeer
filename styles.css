@@ -315,10 +315,11 @@ transition: 0.3s;
 	color: #3D3D3D;
 }
 #sidebar{
-	position: fixed;
+	position: relative;
+	float: right;
+	clear: right;
 	background: #DADADA;
 	margin-top: 10px;
-	margin-left: 705px;
 	width: 235px;
 	height: 303px;
 	

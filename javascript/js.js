@@ -12,6 +12,15 @@ $(document).ready(function() {
 	});
 return true;
 });
+
+$(document).ready(function() {
+	 $('body').keyup(function(e) {
+            if (e.keyCode == 27) {
+                $('.popUpContainer').fadeOut(300);
+          }
+     });
+});
+
 // POPUP SHOW/HIDE END
 
 
