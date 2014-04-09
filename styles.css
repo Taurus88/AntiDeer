@@ -6,7 +6,7 @@
 	background-position: center 0px;
 	background-attachment: scroll;
 }
-.popUpContainer{
+.popUpContainerLogin ,.popUpContainerRegistration{
 	display: none;
 	position:fixed;
 	background: url(img/layer.png)repeat; /*1px background image*/
@@ -16,7 +16,7 @@
     top:0px;
     z-index: 100;
 }
-.popUp{
+.popUpLogin{
     width:350px;
     height:308px;
     background-color: #F1F1F1;
@@ -25,7 +25,7 @@
     color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
-.closeButton{
+.closeButtonLogin{
 	display: block;
 	position: relative;
 	float: right;
@@ -37,7 +37,7 @@
 	height: 34px;
 	z-index: 10;
 }
-.closeButton:hover{
+.closeButtonLogin:hover{
 	transition:0.5;
 	background:url(img/close_grey.png)no-repeat;
 }
@@ -55,10 +55,12 @@
 	display: inline-block;
 	font-family: arial , regular;
 	font-size: 20px;
-	padding: 0 0 0 77px;
+	/*padding: 0 0 0 77px;*/
+	padding: 0 0 0 43px;
 	line-height: 50px;
 	color: #3D3D3D;
 }
+
 .email>span , .password>span{
 	font-family: arial, regular;
 	font-size: 20px;
@@ -81,15 +83,16 @@ width: 250px;
 height: 30px;
 padding: 0 0 0 5px;
 }
+
 .loginButton , .registerButton {
 	position: relative;
-	width: 175px;
+	width: 350px;
 }
 .loginButton>button , .registerButton>button{
-	background: #9EB985; /*#7AB841;*/
+	background: #9EB985; 
 	border: none;
 	outline: none;
-	width: 175px;
+	width: 350px;
 	height: 45px;
 	font-family: arial, regular;
 	font-size: 20px;
@@ -104,6 +107,67 @@ padding: 0 0 0 5px;
 	transition:0.5s;
 	background: #A53434 !important;
 }
+.popUpRegistration{
+	overflow: hidden;
+	/*padding: 10px 10px 10px 10px;*/
+	width: 350px;
+	background-color: #F1F1F1;
+	margin: 180px auto;
+	font-size: 30px;
+	color: #fff;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+.formTitleRegistration{
+	width: 350px;
+	height: 50px;
+	background: #69914F;
+}
+.formTitleRegistration>span{
+	display: inline-block;
+	font-family: arial , regular;
+	font-size: 20px;
+	padding: 0 0 0 43px;
+	line-height: 50px;
+	color: #F0F0F0;
+}
+.registrationForm{
+	position: relative;
+	width: 330px;
+	height: 300px;
+	margin-left: 20px;
+}
+span.notify{
+	display: inline-block;
+	width: 330px;
+	position: relative;
+	bottom: 5px;
+	font-family: arial, regular;
+	font-size: 10px;
+	color: #B10000;
+}
+.firstString , .secondString, .thirdString , .forthString{
+	display: block;
+	position: relative;
+	float: left;
+	margin-bottom: 5px;
+	width: 330px;
+	height: 60px;
+}
+.firstString>span , .secondString>span , .thirdString>span , .forthString>span{
+	display: inline-block;
+	width: 330px;
+	font-family: arial, regular;
+	font-size: 14px;
+	color: #696969;
+}
+.firstString>input, .secondString>input, .thirdString>input, .forthString>input{
+	position: relative;
+	padding-left: 8px;
+	height: 20px;
+	bottom: 5px;
+	margin:0 0 0 0;
+}
+
 .social{
 	position: relative;
 	top: 20px;
@@ -127,7 +191,8 @@ padding: 0 0 0 5px;
 	height: 40px;
 }
 .fb>a:hover{
-	transition: 0.5s;
+	-ms-transition: 0.5s;
+	-webkit-transition: 0.5s;
 	background: url(img/sprite_orange.png)0 0;
 }
 .vk>a{
@@ -182,7 +247,7 @@ padding: 0 0 0 5px;
 	position: relative;
 	cursor: pointer;
 	/*background: #CECECE;*/
-	width: 122px;
+	width: 198px;
 	height: 22px;
 	float: right;
 }
@@ -196,12 +261,12 @@ padding: 0 0 0 5px;
 	width: 23px;
 	height: 23px;
 }
-.enterButton>span:hover{
-transition: 0.3s;
+.enterButton>span:nth-child(2n):hover{
+	transition: 0.3s;
 	text-decoration: underline;
 	color:#527FA3;
 }
-.enterButton>span{
+.enterButton>span:nth-child(2n){
 	display: inline-block;
 	position: relative;
 	top: 1px;
@@ -209,52 +274,71 @@ transition: 0.3s;
 	font-size: 12px;
 	color: #868686;
 }
+.enterButton>span:nth-child(3){
+	position: relative;
+	top: 1px;
+	font-family: arial, regular;
+	font-size: 12px;
+	color: #868686;
+}
+.password{
+	position: relative;
+	margin-top: 10px;
+	width: 260px;
+	top:5px;
+}
 .siteSearch{
 	display: block;
 	position: relative;
 	float: right;
 	clear: right;
-	margin-right: 1px;
-	width: 193px;
-	height: 45px;
-	top: 37px;
-	
+	/* margin-right: 1px; */
+	width: 200px;
+	height: 30px;
+	top: 37px;	
+}
+.siteSearch>form{
+	position:relative; 
+	width: 200px;	
+	height: 25px;
+	background: #FFF;
+	float: right;
+	border: 1px solid #3b3b3b;
+	outline: none;
 }
 
-.siteSearch>form{
+.searchBox{
 	position: relative;
-	background: #FFF;
-	float: left;
-	border: 1px solid #3b3b3b;
-	outline: none; 
-	width: 193px;
-    height: 25px;
+	width: 200px;
+	height: 25px;
 }
 .searchBox>input[type="search"] {
-	/*position: relative;
-	float: left;*/
-    border: none; 
-   	outline: none; /* Убираем свечение в Chrome и Safari */
-    -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+	border: none; 
+   	outline: none; 
+    -webkit-appearance: none; 
     width: 164px;
-    height: 25px; /* Ширина поля */
+    height: 25px;
     vertical-align: middle;
     line-height: 14px;
-	padding-left: 7px;
-     /* Выравнивание по середине */
+	padding-left: 7px;  
+[if Gecko]width: 157px;height: 23px;
    }
+
+
 .searchBox>button[type="submit"] {
 	background:url(img/search_icon.png)no-repeat;
-	padding: 0 !important;
-	margin:0;
 	position: relative;
+	float: right;
+	padding: 0 !important;
+	margin:0;	
 	-webkit-appearance: none;
 	border: none;
-    width: 25px; /* Ширина кнопки */
-    height: 25px; /* Высота кнопки */
+    width: 25px;
+    height: 25px;
     vertical-align: middle;
     cursor: pointer;
-   }
+ }
+
 .searchBox>button[type="submit"]:hover {
  	transition: 0.5s;
 	background:url(img/search_icon_hover.png)no-repeat;

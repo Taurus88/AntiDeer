@@ -1,14 +1,14 @@
-// POPUP SHOW/HIDE START
+// POPUP LOGIN SHOW/HIDE START
 $(document).ready(function() {
-	$('.enterButton span , .enterButton').click(function(){
-		$('.popUpContainer').fadeIn(300)
+	$('.enter').click(function(){
+		$('.popUpContainerLogin').fadeIn(300)
 	});
 return true;
 });
 
 $(document).ready(function() {
-	$('.closeButton').click(function(){
-		$('.popUpContainer').fadeOut(300)
+	$('.closeButtonLogin').click(function(){
+		$('.popUpContainerLogin').fadeOut(300)
 	});
 return true;
 });
@@ -16,12 +16,38 @@ return true;
 $(document).ready(function() {
 	 $('body').keyup(function(e) {
             if (e.keyCode == 27) {
-                $('.popUpContainer').fadeOut(300);
+                $('.popUpContainerLogin').fadeOut(300);
           }
      });
 });
 
 // POPUP SHOW/HIDE END
+
+// ---------------POPUP REGISTRATION SHOW/HIDE START
+$(document).ready(function() {
+	$('.register').click(function(){
+		$('.popUpContainerRegistration').fadeIn(300)
+	});
+return true;
+});
+
+$(document).ready(function() {
+	$('.closeButtonRegistration').click(function(){
+		$('.popUpContainerRegistration').fadeOut(300)
+	});
+return true;
+});
+
+$(document).ready(function() {
+	 $('body').keyup(function(e) {
+            if (e.keyCode == 27) {
+                $('.popUpContainerRegistration').fadeOut(300);
+          }
+     });
+});
+// ------------------POPUP REGISTRATION SHOW/HIDE END
+
+
 
 
 // SCROLING SIDEBAR START

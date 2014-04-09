@@ -12,9 +12,9 @@
 	
 </head>
 <body class="bodyStyle">
-	<div class="popUpContainer">
-		<div class="popUp">
-			<div class="closeButton"></div>
+	<div class="popUpContainerLogin">
+		<div class="popUpLogin">
+			<div class="closeButtonLogin"></div>
 			<div class="formTitle">
 				<span>Вход в личный кабинет</span>
 			</div>
@@ -27,7 +27,7 @@
 										<input type="text" name="login" value="" placeholder=" введите e-mail">
 									</div>
 							</div>
-							<div class="password" style="position: relative; margin-top: 10px; width: 260px;">
+							<div class="password">
 								<span>Пароль</span>
 								<a href="">Забыли пароль?</a>
 							        <div class="inputPassword">
@@ -39,20 +39,49 @@
 					        <div class="loginButton" style="float: right;">
 					        	<button type="img" name="commit" value="true">Войти</button>
 					        </div>
-					        <div class="registerButton"  style="float: left;">
-					        	<button type="img" name="commit" value="true" style="background: #BD6F6F;">Регистрация</button>
-					        </div>
-				        </div>
+					   </div>
 					</form>					
 			</div>
 		</div>		
 	</div>
+	<div class="popUpContainerRegistration">
+		<div class="popUpRegistration">
+			<div class="closeButtonRegistration"></div>
+				<div class="formTitleRegistration">
+					<span>Регистрация новой учетки</span>
+				</div>
+			<div class="registrationForm">
+				<form method="post" action="">
+					<div class="firstString">
+						<span><b>* ИМЯ</b> (login для входа в кабинет):</span>
+						<input type="text" name="nickName" maxlength="25" size="29" value="" placeholder="от 3 до 25 символов"></input>
+					</div>
+					<div class="secondString">
+						<span><b>* E-MAIL</b> (рабочая эл.почта):</span>
+						<input type="text" name="email" maxlength="25" size="29" value="" placeholder="введите ваш e-mail"></input>
+					</div>
+					<div class="thirdString">
+						<span><b>* ПАРОЛЬ</b> (минимум 3 символа):</span>
+						<input type="text" name="password" maxlength="25" size="29" value="" placeholder="введите ваш пароль"></input>
+					</div>
+					<div class="forthString">
+						<span><b>* ПОВТОРИТЕ ПАРОЛЬ</b> (пароль еще раз):</span>
+						<input type="text" name="password2" maxlength="25" size="29" value="" placeholder="повторно введите ваш пароль "></input>
+					</div>
+					<span class="notify"> - Поля помеченные звездочкой <b>*</b> обязательны для заполнения!</span>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<div class="header">
 		<div class="headeritems">
 			<a href="index.html"></a>
 			<div class="enterButton">
 				<p></p>
-				<span>Войти в кабинет</span>
+				<span class="enter">Войти в кабинет</span>
+				<span>|</span>
+				<span class="register">Регистрация</span>
 			</div>
 			<div class="social">
 				<div class="fb">
@@ -69,7 +98,6 @@
 			<div class="siteSearch"> 
 				 <form action="#" method="get" class="srch_form">
 				 	<div class="searchBox">
-				 		<div class="searcIcon"></div>
 				 		<input type="search" name="#" placeholder="поиск..." >
 				 		<button type="submit" value="">
 				 	</div>
